@@ -52,4 +52,35 @@ export const GlobalStyle = createGlobalStyle`
     opacity: 0.6;
     cursor: not-allowed;
   }
+
+  .react-modal-overlay{
+      background: rgba(0,0,0, 0.5);
+      position: fixed;
+      inset: 0 0 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .react-modal-content{
+    position: relative;
+    width: 100%;
+    max-width: 576px;
+    background-color: var(--background);
+    padding: 3rem;
+    border-radius: 4px;
+  }
+
+  .react-modal-close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    border: 0;
+    background: transparent;
+    transition: filter .2s;
+
+    &:hover{
+      filter: brightness(0.8);
+    }
+  }
 `;

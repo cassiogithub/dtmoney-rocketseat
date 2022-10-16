@@ -1,12 +1,16 @@
 import logoImg from '../../assets/logo.svg'
 import { Container, Content } from './styles'
 
-export function Header() {
+interface HeaderpProps {
+  onOpenNewTransactionProps: () => void
+}
+
+export function Header({ onOpenNewTransactionProps }: HeaderpProps) {
   return (
     <Container>
       <Content>
         <img src={logoImg} alt="dt money" />
-        <button type="button">nova transacao</button>
+        <button type="button" onClick={onOpenNewTransactionProps}>nova transacao</button>
       </Content>
     </Container>
   )
